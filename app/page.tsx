@@ -3,6 +3,7 @@ import { motion } from 'motion/react'
 import { XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
+import Image from 'next/image'
 import {
   MorphingDialog,
   MorphingDialogTrigger,
@@ -18,6 +19,7 @@ import {
   BLOG_POSTS,
   EMAIL,
   SOCIAL_LINKS,
+  TECH_STACK,
 } from './data'
 
 const VARIANTS_CONTAINER = {
@@ -137,9 +139,50 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+            Senior at UC Berkeley (Spr '27) studying Data Science with an emphasis in Economics. 
+            I am passionate about building impactful products that people love. 
+            In my free time, I enjoy playing volleyball, thrifting, discovering new music, and making Spotify playlists.
           </p>
+        </div>
+        <div className="mt-4 flex items-center gap-4">
+          <a
+          href="https://drive.google.com/drive/folders/1rF6giCs17UHfh1ig1I_JzG4KmKuk_Dmz?usp=sharingg"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 font-medium text-zinc-900 underline underline-offset-4 transition-colors hover:text-zinc-600 dark:text-zinc-100 dark:hover:text-zinc-300"
+          >
+            View my Resume
+          </a>
+        </div>
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">Tech Stack</h3>
+
+        <div className="flex flex-wrap gap-6">
+          {TECH_STACK.map((tech) => (
+            <div
+              key={tech.name}
+              className="flex flex-col items-center gap-2"
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800">
+                <Image
+                  src={tech.icon}
+                  alt={tech.name}
+                  width={30}
+                  height={30}
+                  className="object-contain"
+                />
+              </div>
+
+              <span className="text-center text-sm text-zinc-600 dark:text-zinc-400">
+                {tech.name}
+              </span>
+            </div>
+          ))}
         </div>
       </motion.section>
 
@@ -191,16 +234,30 @@ export default function Personal() {
                 size={64}
               />
               <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
-                <div className="relative flex w-full flex-row justify-between">
-                  <div>
-                    <h4 className="font-normal dark:text-zinc-100">
-                      {job.title}
-                    </h4>
-                    <p className="text-zinc-500 dark:text-zinc-400">
-                      {job.company}
-                    </p>
+                <div className="relative flex w-full items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <Image
+                      src={job.icon}
+                      alt={`${job.company} logo`}
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 rounded-md object-contain"
+                    />
+
+                    <div>
+                      <h4 className="font-normal dark:text-zinc-100">
+                        {job.title}
+                      </h4>
+                      <p className="text-zinc-500 dark:text-zinc-400">
+                        {job.company}
+                      </p>
+                      <p className="text-sm italic text-zinc-500 dark:text-zinc-400">
+                        {job.location}
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-zinc-600 dark:text-zinc-400">
+
+                  <p className="shrink-0 text-zinc-600 dark:text-zinc-400">
                     {job.start} - {job.end}
                   </p>
                 </div>
@@ -214,43 +271,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <div className="flex flex-col space-y-0">
-          <AnimatedBackground
-            enableHover
-            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
-            transition={{
-              type: 'spring',
-              bounce: 0,
-              duration: 0.2,
-            }}
-          >
-            {BLOG_POSTS.map((post) => (
-              <Link
-                key={post.uid}
-                className="-mx-3 rounded-xl px-3 py-3"
-                href={post.link}
-                data-id={post.uid}
-              >
-                <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
-                    {post.title}
-                  </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">
-                    {post.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </AnimatedBackground>
-        </div>
-      </motion.section>
-
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-5 text-lg font-medium">Connect</h3>
+        <h3 className="mb-5 text-lg font-medium">Connect with me</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           Feel free to contact me at{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>

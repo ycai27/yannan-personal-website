@@ -12,15 +12,16 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nim-fawn.vercel.app/'),
+  metadataBase: new URL('https://your-domain.com'), // UPDATE
   alternates: {
-    canonical: '/'
+    canonical: '/',
   },
   title: {
-    default: 'Nim - Personal website template',
-    template: '%s | Nim'
+    default: 'Yannan Cai',
+    template: '%s | Yannan Cai',
   },
-  description:  'Nim is a free and open-source personal website template built with Next.js 15, React 19 and Motion-Primitives.',
+  description:
+    'Software Engineer focused on AI, backend development, and building intelligent systems.',
 };
 
 const geist = Geist({
