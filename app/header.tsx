@@ -21,7 +21,7 @@ export function Header() {
           href="https://www.linkedin.com/in/yannan-cai-5b473a297/" 
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium text-black dark:text-white">
+          className="text-3xl font-semibold text-black dark:text-white">
             Yannan Cai
           </Link>
 

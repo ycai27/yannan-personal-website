@@ -138,7 +138,7 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Senior at UC Berkeley (Spr '27) studying Data Science with an emphasis in Economics. 
+            Hi! My name is Yannan (pronounced "Yen-non") and I'm a senior at UC Berkeley (Spr '27) studying Data Science with an emphasis in Economics. 
             I am passionate about building impactful products that people love. 
             In my free time, I enjoy playing volleyball, thrifting, discovering new music, and making Spotify playlists.
           </p>
