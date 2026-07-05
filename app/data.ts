@@ -96,20 +96,21 @@ export const EMAIL = 'yannancai@berkeley.edu'
 
 const TECHS = {
   Languages: [
-    ['Python', 'python.webp'],
-    ['Java', 'java.svg'],
+    ['Python', 'python.svg'],
+    ['Java / Kotlin', 'java.svg'],
     ['JavaScript', 'javascript.svg'],
     ['TypeScript', 'typescript.svg'],
     ['SQL', 'sql.svg'],
   ],
   'Full-stack Dev': [
     ['React', 'react.svg'],
-    ['Node.js', 'nodejs.svg'],
+    ['Node.js', 'nodedotjs.svg'],
     ['Express.js', 'express.svg'],
     ['AWS', 'aws.svg'],
     ['MongoDB', 'mongodb.svg'],
     ['PostgreSQL', 'postgresql.svg'],
-    ['HTML/CSS', 'htmlcss.svg'],
+    ['HTML', 'html5.svg'],
+    ['CSS', 'css.svg'],
   ],
   'LLMs/ML': [
     ['LangChain', 'langchain.svg'],
