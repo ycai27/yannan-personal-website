@@ -2,7 +2,7 @@ type Project = {
   name: string
   description: string
   link: string
-  video: string
+  video: string // change to image/link preview for now
   id: string
 }
 
@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
     name: 'Yannanbot',
     description:
       'Personal agentic finance tracker that links to Google Sheets to track my budget and spending.',
-    link: '/',
+    link: 'https://github.com/ycai27/yannan-bot',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
     id: 'project1',
