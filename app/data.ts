@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    icon: '/amazon.png',
+    icon: '/amazon.svg',
     company: 'Amazon',
     title: 'SDE Intern',
     start: 'June 2026',
@@ -60,7 +60,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work1',
   },
   {
-    icon: '/amazon.png',
+    icon: '/amazon.svg',
     company: 'Amazon',
     title: 'SDE Intern',
     start: 'May 2025',
