@@ -137,11 +137,36 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <div className="flex-1">
-          <p className="text-zinc-600 dark:text-zinc-400">
-            Hi! My name is Yannan (pronounced "Yen-non") and I'm a senior at UC Berkeley (Spr '27) studying Data Science with an emphasis in Economics. 
-            I am passionate about building impactful products that people love. 
-            In my free time, I enjoy playing volleyball, thrifting, discovering new music, and making Spotify playlists.
+        <div className="space-y-4 text-zinc-600 dark:text-zinc-400">
+          <p>
+            Hi! My name is <span className="font-semibold">Yannan</span> (pronounced "Yen-non") and I'm a
+            senior at UC Berkeley (Spring '27) studying Data Science with an emphasis in Economics.
           </p>
+
+          <p>
+            I'm passionate about building <span className="font-medium">user-facing products</span> that
+            people genuinely enjoy using. I love paying attention to the little details
+            that make an app intuitive, and I often find myself jotting down feature
+            ideas and UX improvements for products I use every day, from Spotify to
+            Google Tasks. That curiosity carries over into my work, too. My current
+            internship focuses on improving the user experience for internal auditing
+            tools, and it's incredibly rewarding to see my work directly impact the
+            people who use them every day.
+          </p>
+
+          <p>
+            Outside of work, I'm building <span className="font-semibold">Yannanbot</span>, a personal
+            agentic finance tracker (yes, named after myself...) to make budgeting and
+            expense tracking easier. After trying to manage my finances in Google
+            Sheets, I realized I wanted a solution that could automate the tedious
+            parts. You can learn more about it in my <span className="font-semibold">Selected Projects</span> below.
+          </p>
+
+          <p>
+            Aside from coding, I enjoy playing volleyball, thrifting, discovering new
+            music, watching <i>Love Island</i>, and making Spotify playlists.
+          </p>
+        </div>
         </div>
         <div className="mt-4 flex items-center gap-4">
           <a
